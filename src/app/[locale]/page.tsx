@@ -79,17 +79,6 @@ export default async function HomePage({ params }: HomePageProps) {
         </div>
       </section>
 
-      <section className="mt-10 rounded-2xl border border-slate-200 bg-white p-8">
-        <h2 className="text-2xl font-semibold text-ink">{copy.home.process.title}</h2>
-        <div className="mt-4 flex flex-wrap items-center gap-2 text-sm text-slate-600">
-          {copy.home.process.steps.map((step, index) => (
-            <div key={step} className="flex items-center gap-2">
-              <span className="rounded-full bg-soft px-3 py-1">{step}</span>
-              {index < copy.home.process.steps.length - 1 ? <span>→</span> : null}
-            </div>
-          ))}
-        </div>
-      </section>
     </div>
   );
 }

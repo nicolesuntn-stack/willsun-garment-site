@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   }
 
   return buildPageMetadata({
-    title: `${product.name} | ${locale === "zh" ? "梭织服装供应" : "Woven Garment Supply"}`,
+    title: `${product.name} | ${locale === "zh" ? "服装供应" : "Garment Supply"}`,
     description: product.summary,
     canonicalPath: `/${locale}/products/${slug}`
   });

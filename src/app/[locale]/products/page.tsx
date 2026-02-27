@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: ProductsPageProps): Promise<M
   return buildPageMetadata({
     title:
       locale === "zh"
-        ? "梭织服装产品中心｜衬衫/裤装/外套｜品牌名"
-        : "Woven Clothing Products | Shirts Pants Outerwear | Brand Name",
+        ? "服装产品中心｜衬衫/裤装/外套｜Willsun"
+        : "Woven Clothing Products | Shirts Pants Outerwear | Willsun",
     description:
       locale === "zh"
-        ? "按品类浏览梭织服装并快速发起询盘。"
+        ? "按品类浏览服装并快速发起询盘。"
         : "Browse woven clothing categories and start your inquiry.",
     canonicalPath: `/${locale}/products`
   });
@@ -61,8 +61,8 @@ export default async function ProductsPage({ params, searchParams }: ProductsPag
       </h1>
       <p className="mt-3 text-slate-600">
         {locale === "zh"
-          ? "按品类浏览梭织服装，选择目标款式后可直接发起询盘。"
-          : "Browse woven garments by category and start your inquiry directly from each product."}
+          ? "按品类浏览服装，选择目标款式后可直接发起询盘。"
+          : "Browse garments by category and start your inquiry directly from each product."}
       </p>
 
       <div className="mt-6">
@@ -90,8 +90,8 @@ export default async function ProductsPage({ params, searchParams }: ProductsPag
 
       <p className="mt-6 text-sm text-slate-500">
         {locale === "zh"
-          ? "MVP阶段已接入产品数据结构，后续可扩展至50款并接CMS后台。"
-          : "MVP includes product data structure and can scale to 50 items with CMS integration."}
+          ? "产品库数量不设上限，可随时新增。"
+          : "Product library has no fixed limit and can be expanded anytime."}
       </p>
     </div>
   );

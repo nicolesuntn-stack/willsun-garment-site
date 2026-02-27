@@ -6,8 +6,8 @@ import { GA_MEASUREMENT_ID, isAnalyticsEnabled } from "@/lib/analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Woven Garment Website",
-  description: "Bilingual woven garment B2B website MVP"
+  title: "Garment Website",
+  description: "Bilingual garment B2B website MVP"
 };
 
 export default function RootLayout({

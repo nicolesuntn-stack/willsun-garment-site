@@ -11,7 +11,7 @@ type LocaleLayoutProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Woven Garment Site"
+  title: "Garment Site"
 };
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
