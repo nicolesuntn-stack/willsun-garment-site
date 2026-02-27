@@ -11,6 +11,8 @@ type HomePageProps = {
   params: Promise<{ locale: string }>;
 };
 
+export const runtime = "edge";
+
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) {

@@ -2,11 +2,12 @@ import { NextResponse } from "next/server";
 
 import {
   getProductRecords,
-  saveProductRecords,
   type LocalizedProductFields,
   type ProductCategory,
   type ProductRecord
 } from "@/lib/productStore";
+
+export const runtime = "edge";
 
 const allowedCategories: ProductCategory[] = ["shirts", "pants", "outerwear"];
 
@@ -83,8 +84,14 @@ export async function POST(request: Request) {
     zh: body.zh
   };
 
-  items.push(next);
-  await saveProductRecords(items);
-
-  return NextResponse.json({ ok: true, item: next });
+  // Cloudflare edge deployment is read-only without external persistence.
+  return NextResponse.json(
+    {
+      ok: false,
+      item: next,
+      error:
+        "Write operation is disabled in edge deployment. Connect a persistent store (D1/KV/R2) for admin writes."
+    },
+    { status: 501 }
+  );
 }

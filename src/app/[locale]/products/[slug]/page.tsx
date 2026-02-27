@@ -12,6 +12,7 @@ type ProductDetailPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {

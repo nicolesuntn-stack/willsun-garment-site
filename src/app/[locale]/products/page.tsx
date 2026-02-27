@@ -12,6 +12,7 @@ type ProductsPageProps = {
   searchParams: Promise<{ category?: string }>;
 };
 
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 const allowedCategories: ProductCategory[] = ["shirts", "pants", "outerwear"];

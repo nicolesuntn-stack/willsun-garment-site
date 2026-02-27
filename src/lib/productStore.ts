@@ -1,7 +1,4 @@
-import "server-only";
-
-import { promises as fs } from "node:fs";
-import path from "node:path";
+import seedData from "../../data/products.json";
 
 import type { Locale } from "@/lib/i18n";
 
@@ -24,31 +21,19 @@ export type ProductRecord = {
   en: LocalizedProductFields;
 };
 
-type ProductStore = {
+export type ProductStore = {
   items: ProductRecord[];
 };
-
-const dataPath = path.join(process.cwd(), "data", "products.json");
-
-async function readStore(): Promise<ProductStore> {
-  const file = await fs.readFile(dataPath, "utf8");
-  const parsed = JSON.parse(file) as ProductStore;
-
-  if (!Array.isArray(parsed.items)) {
-    return { items: [] };
-  }
-
-  return parsed;
-}
+let memoryStore: ProductStore = {
+  items: Array.isArray(seedData.items) ? (seedData.items as ProductRecord[]) : []
+};
 
 export async function getProductRecords(): Promise<ProductRecord[]> {
-  const store = await readStore();
-  return store.items;
+  return memoryStore.items;
 }
 
 export async function saveProductRecords(items: ProductRecord[]): Promise<void> {
-  const payload: ProductStore = { items };
-  await fs.writeFile(dataPath, JSON.stringify(payload, null, 2), "utf8");
+  memoryStore = { items };
 }
 
 export function toLocalizedProduct(record: ProductRecord, locale: Locale) {

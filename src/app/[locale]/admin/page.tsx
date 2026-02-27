@@ -9,6 +9,7 @@ type AdminPageProps = {
   params: Promise<{ locale: string }>;
 };
 
+export const runtime = "edge";
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: AdminPageProps): Promise<Metadata> {

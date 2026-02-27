@@ -1,4 +1,3 @@
-import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 type InquiryPayload = {
@@ -9,26 +8,7 @@ type InquiryPayload = {
   targetPrice: string;
 };
 
-function getTransporter() {
-  const host = process.env.SMTP_HOST;
-  const port = process.env.SMTP_PORT;
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
-
-  if (!host || !port || !user || !pass) {
-    return null;
-  }
-
-  return nodemailer.createTransport({
-    host,
-    port: Number(port),
-    secure: Number(port) === 465,
-    auth: {
-      user,
-      pass
-    }
-  });
-}
+export const runtime = "edge";
 
 export async function POST(request: Request) {
   const body = (await request.json()) as InquiryPayload;
@@ -43,24 +23,29 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const transporter = getTransporter();
-  if (!transporter) {
+  const webhookUrl = process.env.INQUIRY_WEBHOOK_URL;
+  if (!webhookUrl) {
     return NextResponse.json({
       ok: true,
-      status: "saved_without_email",
-      message: "SMTP not configured yet. Inquiry payload accepted."
+      status: "accepted_without_delivery",
+      message: "Set INQUIRY_WEBHOOK_URL to forward inquiries from edge runtime."
     });
   }
 
-  const to = process.env.INQUIRY_TO_EMAIL ?? "nicolesuntn@gmail.com";
-  const from = process.env.INQUIRY_FROM_EMAIL ?? "no-reply@example.com";
-
-  await transporter.sendMail({
-    from,
-    to,
-    subject: `New Inquiry - ${body.companyName}`,
-    text: `Company: ${body.companyName}\nContact: ${body.managerContact}\nCategory: ${body.category}\nQuantity: ${body.quantity}\nTarget Price: ${body.targetPrice}`
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
   });
 
-  return NextResponse.json({ ok: true });
+  if (!response.ok) {
+    return NextResponse.json(
+      { ok: false, error: "Failed to forward inquiry payload to webhook." },
+      { status: 502 }
+    );
+  }
+
+  return NextResponse.json({ ok: true, status: "forwarded" });
 }

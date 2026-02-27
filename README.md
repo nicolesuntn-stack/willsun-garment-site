@@ -29,18 +29,17 @@ This is a bilingual (Chinese/English) B2B product showcase site for woven garmen
 - `NEXT_PUBLIC_CONTACT_EMAIL`
 - `NEXT_PUBLIC_SITE_URL`
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`
-- `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`
-- `INQUIRY_TO_EMAIL`, `INQUIRY_FROM_EMAIL`
+- `INQUIRY_WEBHOOK_URL`
 - `ADMIN_PASSWORD`
 
-If SMTP is not configured, inquiry API still accepts payload and returns `saved_without_email`.
+Inquiry API runs on edge runtime and forwards payloads to `INQUIRY_WEBHOOK_URL` when configured.
 
 ## Content
 - Chinese content: `src/content/zh`
 - English content: `src/content/en`
 
 Product data is currently file-based and CMS-ready for next phase integration.
-Admin-added products are saved to `data/products.json` and reflected on product pages.
+In edge deployment, admin write APIs are read-only by default unless you add a persistent store (D1/KV/R2).
 
 ## Cloudflare Pages Deployment
 - Framework preset: `None`
