@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "slug": "classic-poplin-shirt",
+      "category": "shirts",
+      "name": "经典府绸衬衫",
+      "summary": "适用于商务与零售线的长袖梭织衬衫。",
+      "overview": "版型简洁，适合品牌贴牌系列开发。",
+      "fabric": "65%棉, 35%涤",
+      "sizes": "S-XXL",
+      "colors": "白色、浅蓝、黑色",
+      "image": "/images/products/product-01.jpg"
+    },
+    {
+      "slug": "relaxed-linen-shirt",
+      "category": "shirts",
+      "name": "宽松亚麻衬衫",
+      "summary": "春夏项目常用的透气梭织衬衫。",
+      "overview": "轻薄亚麻混纺，适合休闲渠道销售。",
+      "fabric": "55%亚麻, 45%棉",
+      "sizes": "S-XL",
+      "colors": "米色、橄榄绿、白色",
+      "image": "/images/products/product-02.jpg"
+    },
+    {
+      "slug": "cargo-tapered-pants",
+      "category": "pants",
+      "name": "工装束脚裤",
+      "summary": "带功能口袋的梭织裤装。",
+      "overview": "锥形裤腿设计，兼顾耐穿与实用性。",
+      "fabric": "98%棉, 2%氨纶",
+      "sizes": "30-38",
+      "colors": "卡其、藏蓝、黑色",
+      "image": "/images/products/product-03.jpg"
+    },
+    {
+      "slug": "tailored-straight-pants",
+      "category": "pants",
+      "name": "修身直筒裤",
+      "summary": "适用于商务休闲系列的梭织裤装。",
+      "overview": "现代通勤风格，适合多场景搭配。",
+      "fabric": "72%涤, 24%人棉, 4%氨纶",
+      "sizes": "28-40",
+      "colors": "炭灰、黑色、驼色",
+      "image": "/images/products/product-04.jpg"
+    },
+    {
+      "slug": "lightweight-bomber-jacket",
+      "category": "outerwear",
+      "name": "轻量飞行夹克",
+      "summary": "城市休闲风梭织外套。",
+      "overview": "过渡季畅销款，适合多季节陈列。",
+      "fabric": "100%尼龙",
+      "sizes": "S-XXL",
+      "colors": "军绿、黑色、石色",
+      "image": "/images/products/product-05.jpg"
+    },
+    {
+      "slug": "water-resistant-parka",
+      "category": "outerwear",
+      "name": "防泼水派克服",
+      "summary": "适配秋冬项目的功能性梭织外套。",
+      "overview": "中长款版型，满足通勤与户外日常穿着。",
+      "fabric": "100%涤纶",
+      "sizes": "M-XXXL",
+      "colors": "藏蓝、黑色、灰色",
+      "image": "/images/products/product-06.jpg"
+    }
+  ]
+}

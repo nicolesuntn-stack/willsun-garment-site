@@ -1,0 +1,22 @@
+{
+  "brandName": "品牌名",
+  "navigation": {
+    "home": "首页",
+    "products": "产品中心",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "EN"
+  },
+  "cta": {
+    "whatsapp": "WhatsApp询价",
+    "email": "发送邮件",
+    "form": "提交询盘"
+  },
+  "footer": {
+    "tagline": "专注梭织服装制造，服务全球B2B采购。",
+    "copyright": "版权所有。"
+  }
+}

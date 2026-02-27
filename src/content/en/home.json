@@ -1,0 +1,34 @@
+{
+  "seo": {
+    "title": "Woven Garment Manufacturer | Woven Clothing Supplier | Brand Name",
+    "description": "Woven garment manufacturer for brands, wholesalers, and chain retailers."
+  },
+  "hero": {
+    "title": "Woven Garment Manufacturing for Global B2B Buyers",
+    "subtitle": "Stable quality, reliable lead time, and clear pricing range to move your order from inquiry to production."
+  },
+  "advantages": {
+    "title": "Why Work With Us",
+    "items": [
+      {
+        "title": "Quality Assurance",
+        "text": "Standardized quality control process for consistent bulk production."
+      },
+      {
+        "title": "Reliable Lead Time",
+        "text": "Sampling and production managed against timeline milestones."
+      },
+      {
+        "title": "Clear Pricing Range",
+        "text": "Transparent quotation range based on style and quantity."
+      }
+    ]
+  },
+  "categories": {
+    "title": "Product Categories"
+  },
+  "process": {
+    "title": "Order Process",
+    "steps": ["Inquiry", "Quotation", "Sampling", "Bulk Order Confirmation", "Shipment"]
+  }
+}

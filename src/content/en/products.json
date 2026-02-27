@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "slug": "classic-poplin-shirt",
+      "category": "shirts",
+      "name": "Classic Poplin Shirt",
+      "summary": "Long-sleeve woven shirt for business and retail lines.",
+      "overview": "A clean silhouette shirt suitable for private-label collections.",
+      "fabric": "65% Cotton, 35% Polyester",
+      "sizes": "S-XXL",
+      "colors": "White, Light Blue, Black",
+      "image": "/images/products/product-01.jpg"
+    },
+    {
+      "slug": "relaxed-linen-shirt",
+      "category": "shirts",
+      "name": "Relaxed Linen Shirt",
+      "summary": "Breathable woven shirt for spring and summer programs.",
+      "overview": "Lightweight linen blend shirt developed for casual retail channels.",
+      "fabric": "55% Linen, 45% Cotton",
+      "sizes": "S-XL",
+      "colors": "Beige, Olive, White",
+      "image": "/images/products/product-02.jpg"
+    },
+    {
+      "slug": "cargo-tapered-pants",
+      "category": "pants",
+      "name": "Cargo Tapered Pants",
+      "summary": "Functional woven pants with utility pockets.",
+      "overview": "A tapered leg cargo style built for durable daily wear.",
+      "fabric": "98% Cotton, 2% Spandex",
+      "sizes": "30-38",
+      "colors": "Khaki, Navy, Black",
+      "image": "/images/products/product-03.jpg"
+    },
+    {
+      "slug": "tailored-straight-pants",
+      "category": "pants",
+      "name": "Tailored Straight Pants",
+      "summary": "Structured woven pants for business-casual assortments.",
+      "overview": "Straight-fit style designed for modern office collections.",
+      "fabric": "72% Polyester, 24% Rayon, 4% Spandex",
+      "sizes": "28-40",
+      "colors": "Charcoal, Black, Camel",
+      "image": "/images/products/product-04.jpg"
+    },
+    {
+      "slug": "lightweight-bomber-jacket",
+      "category": "outerwear",
+      "name": "Lightweight Bomber Jacket",
+      "summary": "Urban woven outerwear with ribbed details.",
+      "overview": "Transitional outerwear style for multi-season merchandising.",
+      "fabric": "100% Nylon",
+      "sizes": "S-XXL",
+      "colors": "Army Green, Black, Stone",
+      "image": "/images/products/product-05.jpg"
+    },
+    {
+      "slug": "water-resistant-parka",
+      "category": "outerwear",
+      "name": "Water-Resistant Parka",
+      "summary": "Performance woven parka for cold-weather programs.",
+      "overview": "Longline parka with weather-ready shell and practical pockets.",
+      "fabric": "100% Polyester",
+      "sizes": "M-XXXL",
+      "colors": "Navy, Black, Grey",
+      "image": "/images/products/product-06.jpg"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "brandName": "Brand Name",
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "EN"
+  },
+  "cta": {
+    "whatsapp": "Inquire on WhatsApp",
+    "email": "Send Email",
+    "form": "Submit Inquiry"
+  },
+  "footer": {
+    "tagline": "Woven garment manufacturing for global B2B buyers.",
+    "copyright": "All rights reserved."
+  }
+}
