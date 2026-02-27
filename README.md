@@ -41,3 +41,10 @@ If SMTP is not configured, inquiry API still accepts payload and returns `saved_
 
 Product data is currently file-based and CMS-ready for next phase integration.
 Admin-added products are saved to `data/products.json` and reflected on product pages.
+
+## Cloudflare Pages Deployment
+- Framework preset: `None`
+- Build command: `npm run pages:build`
+- Build output directory: `.vercel/output/static`
+
+If you deploy with Cloudflare Pages and set output directory to `out`, deployment will fail because this app uses Next.js server functions/routes.
