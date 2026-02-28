@@ -6,6 +6,11 @@ type InquiryPayload = {
   category: string;
   quantity: string;
   targetPrice: string;
+  selectedProducts?: Array<{
+    slug: string;
+    name: string;
+    category: string;
+  }>;
 };
 
 export const runtime = "edge";

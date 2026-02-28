@@ -68,6 +68,13 @@ export default async function ContactPage({ params }: ContactPageProps) {
             category: locale === "zh" ? "采购品类" : "Product Category",
             quantity: locale === "zh" ? "预计数量" : "Estimated Quantity",
             targetPrice: locale === "zh" ? "目标价格" : "Target Price",
+            selectedProducts: locale === "zh" ? "采购车已选款式" : "Selected Products",
+            emptyCart:
+              locale === "zh"
+                ? "采购车为空，请先在产品中心添加款式。"
+                : "Cart is empty. Add product styles from the products page first.",
+            removeItem: locale === "zh" ? "移除" : "Remove",
+            clearCart: locale === "zh" ? "清空采购车" : "Clear Cart",
             submit: copy.common.cta.form,
             success: copy.contact.success
           }}

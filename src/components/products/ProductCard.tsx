@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { AddToCartButton } from "@/components/shared/AddToCartButton";
 import type { ProductItem } from "@/lib/products";
 import type { Locale } from "@/lib/i18n";
 
@@ -29,6 +30,16 @@ export function ProductCard({ locale, product, viewLabel, quickInquiryLabel }: P
         >
           {quickInquiryLabel}
         </Link>
+        <AddToCartButton
+          item={{
+            slug: product.slug,
+            name: product.name,
+            category: product.category
+          }}
+          addLabel={locale === "zh" ? "加入购物车" : "Add to Cart"}
+          addedLabel={locale === "zh" ? "已加入采购车" : "Added to cart"}
+          existsLabel={locale === "zh" ? "采购车中已存在" : "Already in cart"}
+        />
       </div>
     </article>
   );

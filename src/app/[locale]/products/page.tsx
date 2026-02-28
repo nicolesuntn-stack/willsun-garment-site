@@ -88,12 +88,6 @@ export default async function ProductsPage({ params, searchParams }: ProductsPag
           />
         ))}
       </div>
-
-      <p className="mt-6 text-sm text-slate-500">
-        {locale === "zh"
-          ? "产品库数量不设上限，可随时新增。"
-          : "Product library has no fixed limit and can be expanded anytime."}
-      </p>
     </div>
   );
 }

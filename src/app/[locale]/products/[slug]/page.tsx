@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { AddToCartButton } from "@/components/shared/AddToCartButton";
 import { CTAButtons } from "@/components/shared/CTAButtons";
 import { getCopy } from "@/lib/copy";
 import { isLocale } from "@/lib/i18n";
@@ -100,6 +101,18 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             <CTAButtons
               whatsappLabel={copy.common.cta.whatsapp}
               emailLabel={copy.common.cta.email}
+            />
+          </div>
+          <div className="mt-4">
+            <AddToCartButton
+              item={{
+                slug: product.slug,
+                name: product.name,
+                category: product.category
+              }}
+              addLabel={locale === "zh" ? "加入购物车" : "Add to Cart"}
+              addedLabel={locale === "zh" ? "已加入采购车" : "Added to cart"}
+              existsLabel={locale === "zh" ? "采购车中已存在" : "Already in cart"}
             />
           </div>
         </aside>
