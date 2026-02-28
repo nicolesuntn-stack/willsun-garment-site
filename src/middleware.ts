@@ -13,8 +13,12 @@ function isAdminApiPath(pathname: string): boolean {
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const host = request.headers.get("host")?.split(":")[0] ?? "";
-  const configuredAdminHost = process.env.ADMIN_HOST ?? "";
+  const host = request.nextUrl.hostname.toLowerCase();
+  const configuredAdminHost = (
+    process.env.ADMIN_HOST ?? "willsun-admin.pages.dev"
+  )
+    .trim()
+    .toLowerCase();
   const isLocalDevHost = host === "localhost" || host === "127.0.0.1";
   const isAdminHost = configuredAdminHost ? host === configuredAdminHost : false;
   const adminPagePath = isAdminPagePath(pathname);
