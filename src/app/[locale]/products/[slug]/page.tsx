@@ -57,6 +57,30 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       <div className="mt-6 grid gap-6 lg:grid-cols-[2fr_1fr]">
         <article className="rounded-2xl border border-slate-200 bg-white p-6">
           <div className="mb-6 h-64 rounded-lg bg-soft" />
+          {product.images.length > 1 ? (
+            <div className="mb-4 flex flex-wrap gap-2">
+              {product.images.map((url) => (
+                <span key={url} className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-600">
+                  {url}
+                </span>
+              ))}
+            </div>
+          ) : null}
+          {product.videos.length ? (
+            <div className="mb-4 space-y-2">
+              {product.videos.map((url) => (
+                <a
+                  key={url}
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-xs text-primary underline"
+                >
+                  {locale === "zh" ? "产品视频" : "Product Video"}: {url}
+                </a>
+              ))}
+            </div>
+          ) : null}
           <h1 className="text-3xl font-bold text-ink">{product.name}</h1>
           <p className="mt-3 text-slate-600">{product.summary}</p>
 

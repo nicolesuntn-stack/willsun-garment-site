@@ -12,6 +12,8 @@ export type ProductItem = {
   slug: string;
   category: ProductCategory;
   image: string;
+  images: string[];
+  videos: string[];
   name: string;
   summary: string;
   overview: string;
